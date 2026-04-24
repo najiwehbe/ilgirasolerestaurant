@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Girasole — Authentic Italian Cuisine · Delray Beach, FL</title>
+  <meta name="description" content="Il Girasole offers authentic Italian fine dining in Delray Beach, Florida. Family-owned since 1980. Open Tuesday–Sunday, 5–10 PM. Takeout available. Call 561-272-3566." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================
+       RESET & ROOT
+    ================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:       #FAF5EB;
+      --warm-white:  #FEFCF7;
+      --parchment:   #F2E8D0;
+      --gold:        #B8913A;
+      --gold-light:  #D4AA5A;
+      --dark-green:  #1A3022;
+      --mid-green:   #2D5040;
+      --wine:        #6B1F1F;
+      --wine-light:  #8B2E2E;
+      --text-dark:   #1E1A16;
+      --text-mid:    #4A3F35;
+      --text-light:  #7A6A5A;
+      --border:      #D4C4A0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ================================================
+       NAVIGATION
+    ================================================ */
+    #mainNav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent);
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    #mainNav.scrolled {
+      background: rgba(20, 40, 28, 0.97) !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 3rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .nav-logo em { font-style: italic; color: var(--gold-light); }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-phone {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      transition: all 0.3s;
+    }
+
+    /* ================================================
+       MOBILE MENU
+    ================================================ */
+    #mobileMenu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--dark-green);
+      z-index: 999;
+      padding: 6rem 2rem 3rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.2rem;
+    }
+    #mobileMenu.open { display: flex; }
+    #mobileMenu a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-style: italic;
+      transition: color 0.3s;
+    }
+    #mobileMenu a:hover { color: var(--gold-light); }
+    #mobileMenu .mob-phone {
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--gold-light) !important;
+      margin-top: 1rem;
+    }
+    .mob-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ================================================
+       HERO
+    ================================================ */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* Lush Italian evening gradient — works even if image fails to load */
+      background:
+        linear-gradient(160deg, rgba(26,48,34,0.72) 0%, rgba(107,31,31,0.55) 60%, rgba(26,48,34,0.80) 100%),
+        url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/fa/caption.jpg?w=1400&h=900&s=1') center/cover no-repeat;
+    }
+    /* Subtle texture overlay */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at 30% 70%, rgba(184,145,58,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 75% 25%, rgba(107,31,31,0.08) 0%, transparent 60%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+      max-width: 880px;
+    }
+    .hero-eyebrow {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--gold-light);
+      letter-spacing: 0.22em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.8rem, 9vw, 7.5rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .hero-title em { font-style: italic; color: var(--gold-light); }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.82);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .hero-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.6rem auto;
+    }
+    .hero-ornament-line {
+      width: 70px;
+      height: 1px;
+      background: var(--gold-light);
+      opacity: 0.65;
+    }
+    .sunflower-icon { font-size: 1.1rem; color: var(--gold-light); }
+    .hero-tagline {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 2.8rem;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2.4rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(184,145,58,0.45);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.55);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+    .btn-wine {
+      background: var(--wine);
+      color: #fff;
+    }
+    .btn-wine:hover {
+      background: var(--wine-light);
+      transform: translateY(-2px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      text-align: center;
+      cursor: pointer;
+    }
+    .scroll-hint-label {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .scroll-hint-arrow {
+      display: inline-block;
+      color: rgba(255,255,255,0.5);
+      font-size: 1.2rem;
+      animation: bob 2s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ================================================
+       SHARED SECTION STYLES
+    ================================================ */
+    .section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+    .section-title em { font-style: italic; color: var(--wine); }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .divider-line {
+      height: 1px;
+      background: var(--border);
+      flex: 0 0 55px;
+    }
+    .divider-dot { color: var(--gold); font-size: 0.75rem; }
+    .divider-center {
+      justify-content: center;
+    }
+    .divider-center .divider-line { flex: 0 0 80px; }
+
+    /* ================================================
+       FEATURE STRIP (between hero and about)
+    ================================================ */
+    .feature-strip {
+      background: var(--dark-green);
+      padding: 2rem;
+    }
+    .feature-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-item:first-child { border-left: none; }
+    .feature-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .feature-text-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.2rem;
+    }
+    .feature-text-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    /* ================================================
+       ABOUT
+    ================================================ */
+    .about { background: var(--warm-white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+      /* fallback if image fails */
+      background: linear-gradient(135deg, var(--dark-green), var(--mid-green));
+    }
+    .about-corner-border {
+      position: absolute;
+      top: -1.2rem;
+      right: -1.2rem;
+      width: 55%;
+      aspect-ratio: 1;
+      border: 2px solid var(--gold);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .about-est-badge {
+      position: absolute;
+      bottom: -1.8rem;
+      left: -1.8rem;
+      width: 110px;
+      height: 110px;
+      background: var(--wine);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(107,31,31,0.4);
+    }
+    .badge-est { font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+    .badge-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .badge-sub { font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+    .about-text p {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.95;
+      margin-bottom: 1.4rem;
+      font-weight: 300;
+    }
+    .about-text p strong { color: var(--text-dark); font-weight: 700; }
+    blockquote.pull-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.45rem;
+      color: var(--wine);
+      line-height: 1.55;
+      padding: 1.4rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 1.2rem;
+      background: var(--cream);
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .stat-lbl {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ================================================
+       AMBIANCE PHOTO STRIP
+    ================================================ */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      overflow: hidden;
+    }
+    .photo-cell {
+      overflow: hidden;
+      position: relative;
+      background: var(--dark-green);
+    }
+    .photo-cell:first-child { grid-row: 1 / 3; }
+    .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .photo-cell:hover img { transform: scale(1.05); }
+    /* CSS fallback cards for photo strip */
+    .photo-bg-1 { background: linear-gradient(135deg, #1A3022 0%, #2D5040 100%); }
+    .photo-bg-2 { background: linear-gradient(135deg, #6B1F1F 0%, #3A1010 100%); }
+    .photo-bg-3 { background: linear-gradient(135deg, #B8913A 0%, #7A5C1E 100%); }
+    .photo-bg-4 { background: linear-gradient(135deg, #2D5040 0%, #1A3022 100%); }
+    .photo-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1.2rem 1rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.06em;
+    }
+
+    /* ================================================
+       MENU
+    ================================================ */
+    .menu-section {
+      background: var(--parchment);
+    }
+    .menu-section .section-label,
+    .menu-section .section-title { text-align: center; }
+    .menu-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .tab-btn {
+      padding: 0.55rem 1.4rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-mid);
+      transition: all 0.25s;
+    }
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: var(--dark-green);
+      color: #fff;
+      border-color: var(--dark-green);
+    }
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+    .panel-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .panel-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--wine);
+      margin-bottom: 0.4rem;
+    }
+    .panel-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 3rem;
+    }
+    .menu-item {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .item-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 0.22rem;
+    }
+    .item-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.45;
+    }
+    .menu-footnote {
+      text-align: center;
+      margin-top: 2.8rem;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.55);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* ================================================
+       REVIEWS
+    ================================================ */
+    .reviews-section { background: var(--dark-green); }
+    .reviews-section .section-label { color: var(--gold-light); }
+    .reviews-section .section-title { color: #fff; }
+    .reviews-section .section-title em { color: var(--gold-light); }
+    .reviews-section .divider-line { background: rgba(255,255,255,0.15); }
+    .reviews-section .divider-dot { color: var(--gold-light); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin-top: 3rem;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem 1.8rem;
+    }
+    .review-stars {
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .review-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .review-author {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+    .ta-footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .ta-footer p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .ta-footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,170,90,0.4);
+    }
+    .ta-footer a:hover { color: #fff; }
+    .ta-rating {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    /* ================================================
+       VISIT / INFO
+    ================================================ */
+    .info-section { background: var(--cream); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 1rem;
+    }
+    .info-card {
+      padding: 2rem 1.8rem;
+      border-top: 2px solid var(--gold);
+      background: #fff;
+    }
+    .info-icon { font-size: 1.6rem; margin-bottom: 0.9rem; }
+    .info-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1.2rem;
+    }
+    .hours-list { list-style: none; }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      border-bottom: 1px dotted var(--border);
+    }
+    .hours-list li:last-child { border-bottom: none; }
+    .hours-list .day { font-weight: 700; color: var(--text-dark); }
+    .hours-list .closed { color: var(--wine); font-style: italic; }
+    .addr-block {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .big-phone {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dark-green);
+      text-decoration: none;
+      margin-bottom: 0.8rem;
+      transition: color 0.3s;
+    }
+    .big-phone:hover { color: var(--wine); }
+    .text-link {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 1px;
+      transition: color 0.3s;
+    }
+    .text-link:hover { color: var(--wine); }
+    .amenity-list {
+      margin-top: 1rem;
+      font-size: 0.83rem;
+      color: var(--text-light);
+      line-height: 2;
+    }
+    /* Takeout card */
+    .takeout-card {
+      background: var(--wine);
+      border-top-color: var(--wine-light);
+    }
+    .takeout-card .info-card-title { color: #fff; }
+    .takeout-card .info-icon { color: var(--gold-light); }
+    .takeout-card p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .takeout-card strong { color: #fff; }
+    .takeout-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.9rem;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: 'Lato', sans-serif;
+      margin-top: 1.2rem;
+      transition: background 0.3s;
+    }
+    .takeout-cta:hover { background: var(--gold-light); }
+
+    /* ================================================
+       MAP
+    ================================================ */
+    .map-embed { height: 420px; display: block; }
+    .map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* ================================================
+       FOOTER
+    ================================================ */
+    footer {
+      background: #0D1C12;
+      color: rgba(255,255,255,0.55);
+      padding: 4rem 2rem 2rem;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+    .footer-logo em { font-style: italic; color: var(--gold-light); }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+    .footer-about {
+      font-size: 0.82rem;
+      line-height: 1.85;
+      max-width: 280px;
+    }
+    .footer-heading {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.3rem;
+      font-weight: 700;
+    }
+    .footer-nav { list-style: none; }
+    .footer-nav li { margin-bottom: 0.6rem; }
+    .footer-nav a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.3s;
+    }
+    .footer-nav a:hover { color: var(--gold-light); }
+    .footer-contact li {
+      list-style: none;
+      font-size: 0.83rem;
+      line-height: 1.65;
+      margin-bottom: 0.5rem;
+    }
+    .footer-contact a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 1.8rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ================================================
+       RESPONSIVE
+    ================================================ */
+    @media (max-width: 1024px) {
+      .about-grid { gap: 3rem; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid .review-card:last-child { grid-column: 1 / 3; }
+      .feature-strip-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-phone { display: none; }
+      .hamburger { display: flex; }
+      .nav-inner { padding: 1rem 1.5rem; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .about-img-wrap { order: -1; }
+      .about-corner-border { display: none; }
+      .about-est-badge { bottom: -1.2rem; left: -0.8rem; width: 90px; height: 90px; }
+      .badge-year { font-size: 1.4rem; }
+
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+      }
+      .photo-cell:first-child { grid-row: auto; grid-column: 1 / 3; }
+
+      .menu-grid { grid-template-columns: 1fr; }
+
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-grid .review-card:last-child { grid-column: auto; }
+
+      .info-grid { grid-template-columns: 1fr; }
+
+      .feature-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .feature-item { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
+      .feature-item:nth-child(odd) { border-left: none; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+      .hero-tagline { display: none; }
+      .section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================
+     NAVIGATION
+================================================ -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Il <em>Girasole</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+    <span class="nav-phone">561.272.3566</span>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu">
+  <button class="mob-close" id="mobClose">✕</button>
+  <a href="#about" class="mob-link">Our Story</a>
+  <a href="#menu" class="mob-link">Menu</a>
+  <a href="#reviews" class="mob-link">Reviews</a>
+  <a href="#visit" class="mob-link">Visit Us</a>
+  <a href="tel:+15612723566" class="mob-phone mob-link">561.272.3566</a>
+</div>
+
+
+<!-- ================================================
+     HERO
+================================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Delray Beach, Florida</span>
+    <h1 class="hero-title">Il <em>Girasole</em></h1>
+    <p class="hero-subtitle">Ristorante Italiano</p>
+    <div class="hero-ornament">
+      <span class="hero-ornament-line"></span>
+      <span class="sunflower-icon">✦</span>
+      <span class="hero-ornament-line"></span>
+    </div>
+    <p class="hero-tagline">Family · Owned &nbsp;·&nbsp; Fine Italian Cuisine &nbsp;·&nbsp; Est. 1980</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-gold">Explore Our Menu</a>
+      <a href="tel:+15612723566" class="btn btn-outline-white">Order Takeout</a>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <span class="scroll-hint-label">Discover</span>
+    <span class="scroll-hint-arrow">↓</span>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FEATURE STRIP
+================================================ -->
+<div class="feature-strip">
+  <div class="feature-strip-inner">
+    <div class="feature-item">
+      <div class="feature-icon">🌻</div>
+      <div>
+        <div class="feature-text-label">Established</div>
+        <div class="feature-text-value">Family-Owned Since 1980</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">👨‍🍳</div>
+      <div>
+        <div class="feature-text-label">Our Kitchen</div>
+        <div class="feature-text-value">Same Chef Since 1988</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🍷</div>
+      <div>
+        <div class="feature-text-label">Service</div>
+        <div class="feature-text-value">Dine-In &amp; Takeout Available</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">⭐</div>
+      <div>
+        <div class="feature-text-label">TripAdvisor</div>
+        <div class="feature-text-value">4.4 / 5 · 131 Reviews</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     ABOUT
+================================================ -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+
+      <!-- Image -->
+      <div class="about-img-wrap">
+        <img
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/74/04/5a/filename-giralsole-front.jpg?w=600&h=750&s=1"
+          alt="Il Girasole Restaurant exterior"
+          class="about-img"
+          onerror="this.style.minHeight='460px'; this.style.background='linear-gradient(135deg,#1A3022,#2D5040)'; this.removeAttribute('src')"
+        />
+        <div class="about-corner-border"></div>
+        <div class="about-est-badge">
+          <span class="badge-est">Est.</span>
+          <span class="badge-year">1980</span>
+          <span class="badge-sub">Delray Beach</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text">
+        <span class="section-label">La Nostra Storia — Our Story</span>
+        <h2 class="section-title">A <em>Hidden Treasure</em><br>in South Florida</h2>
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-dot">✦</span>
+        </div>
+
+        <blockquote class="pull-quote">
+          "Inside, we stepped back into Italy. The service, the attention to the diners, was like finding a family."
+          <footer style="font-size:0.75rem; color: var(--text-light); margin-top:0.6rem; font-style:normal; letter-spacing:0.08em;">— MarciaS, TripAdvisor</footer>
+        </blockquote>
+
+        <p>
+          For over four decades, <strong>Il Girasole</strong> — <em>the sunflower</em> in Italian — has graced Delray Beach with an unwavering commitment to authentic Italian cuisine. Founded in 1980 and shaped by the same passionate chef since 1988, ours is a story written in garlic, olive oil, and love.
+        </p>
+        <p>
+          We believe fine dining should feel like visiting family. Every dish is prepared with the care and precision of generations of Italian tradition — from our hand-crafted pastas and delicate veal preparations to the freshest seafood from the day's catch. Come as a guest. Leave as family.
+        </p>
+        <p>
+          Ranked among the <strong>top 40 restaurants in Delray Beach</strong> and honored with a <strong>TripAdvisor Travelers' Choice</strong> distinction, Il Girasole is the destination of discerning diners who value authenticity above all else.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">45+</div>
+            <div class="stat-lbl">Years Serving</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4.4★</div>
+            <div class="stat-lbl">TripAdvisor</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">#40</div>
+            <div class="stat-lbl">of 370 Restaurants</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     PHOTO STRIP
+================================================ -->
+<div class="photo-strip">
+  <div class="photo-cell photo-bg-1">
+    <img
+      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/fa/caption.jpg?w=900&h=600&s=1"
+      alt="Il Girasole dining room"
+      onerror="this.remove()"
+    />
+    <div class="photo-label">The Dining Room</div>
+  </div>
+  <div class="photo-cell photo-bg-2">
+    <img
+      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/f9/caption.jpg?w=500&h=320&s=1"
+      alt="Il Girasole ambiance"
+      onerror="this.remove()"
+    />
+    <div class="photo-label">Intimate Ambiance</div>
+  </div>
+  <div class="photo-cell photo-bg-3">
+    <img
+      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/f8/caption.jpg?w=500&h=320&s=1"
+      alt="Il Girasole cuisine"
+      onerror="this.remove()"
+    />
+    <div class="photo-label">Authentic Cuisine</div>
+  </div>
+  <div class="photo-cell photo-bg-4">
+    <img
+      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/74/04/5a/filename-giralsole-front.jpg?w=500&h=320&s=1"
+      alt="Il Girasole entrance"
+      onerror="this.remove()"
+    />
+    <div class="photo-label">Since 1980</div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     MENU
+================================================ -->
+<section class="section menu-section" id="menu">
+  <div class="section-inner">
+    <span class="section-label">Cucina Italiana</span>
+    <h2 class="section-title">Our <em>Dinner Menu</em></h2>
+    <div class="divider divider-center">
+      <span class="divider-line"></span>
+      <span class="divider-dot">✦</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="antipasti">Antipasti</button>
+      <button class="tab-btn" data-tab="insalate">Insalate</button>
+      <button class="tab-btn" data-tab="pasta">Pasta</button>
+      <button class="tab-btn" data-tab="pollo">Pollo</button>
+      <button class="tab-btn" data-tab="carne">Carne &amp; Vitello</button>
+      <button class="tab-btn" data-tab="pesce">Pesce</button>
+      <button class="tab-btn" data-tab="contorni">Contorni</button>
+    </div>
+
+    <!-- ANTIPASTI -->
+    <div class="menu-panel active" id="panel-antipasti">
+      <div class="panel-header">
+        <h3 class="panel-title">Antipasti</h3>
+        <p class="panel-sub">Starters to awaken the palate</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Carpaccio</div>
+          <div class="item-desc">Paper-thin slices of raw beef with thinly sliced Parmigiano</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Antipasto</div>
+          <div class="item-desc">Cold plate of Italian salumi, cheeses, olives, artichoke, roast pepper, hard boiled egg</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Escargots Armagnac</div>
+          <div class="item-desc">Prepared with a rich garlic brandy sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Eggplant al Forno</div>
+          <div class="item-desc">Baked with marinara sauce, fresh basil and mozzarella</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Norwegian Smoked Salmon</div>
+          <div class="item-desc">Elegantly presented in the traditional manner</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">San Daniele Prosciutto</div>
+          <div class="item-desc">The finest prosciutto served with sweet cantaloupe melon</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Cannelloni Rossini</div>
+          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, topped with béchamel and marinara</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Roasted Pepper</div>
+          <div class="item-desc">With anchovies and fresh buffalo mozzarella, served hot or cold</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Vichyssoise</div>
+          <div class="item-desc">Classic chilled potato-leek cream soup</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mushroom Soup</div>
+          <div class="item-desc">Rich and earthy, available in cup or bowl</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Shrimp Cocktail</div>
+          <div class="item-desc">Classic presentation with house cocktail sauce</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSALATE -->
+    <div class="menu-panel" id="panel-insalate">
+      <div class="panel-header">
+        <h3 class="panel-title">Insalate</h3>
+        <p class="panel-sub">Fresh salads, simply and beautifully prepared</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Duck Prosciutto Salad</div>
+          <div class="item-desc">Thinly sliced duck prosciutto on mixed greens with fresh orange-citrus vinaigrette</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Arugula Salad</div>
+          <div class="item-desc">Peppery arugula with toasted almonds and shaved Parmigiana</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Caprese</div>
+          <div class="item-desc">Fresh buffalo mozzarella, ripe tomatoes and fragrant basil</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Caesar</div>
+          <div class="item-desc">Romaine hearts, house Caesar dressing and golden croutons</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mesclun</div>
+          <div class="item-desc">Mixed field greens with house vinaigrette</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Red Beet &amp; Gorgonzola</div>
+          <div class="item-desc">Beets tossed with mesclun greens, topped with warm Gorgonzola</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Sliced Tomatoes</div>
+          <div class="item-desc">Seasonal tomatoes with fresh herbs and extra virgin olive oil</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASTA -->
+    <div class="menu-panel" id="panel-pasta">
+      <div class="panel-header">
+        <h3 class="panel-title">Paste</h3>
+        <p class="panel-sub">Classic Italian pasta, lovingly made to order</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Capellini Gamberi ✦</div>
+          <div class="item-desc">Angel hair pasta with shrimp in a light red sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Linguine con Vongole ✦</div>
+          <div class="item-desc">Linguine with clam sauce — available in red or white</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Linguine Pescatora ✦</div>
+          <div class="item-desc">Clams, mussels, shrimp, scallops and langostino in red sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Tagliolini Astice ✦</div>
+          <div class="item-desc">Lobster in a delicate brandy shallot sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Cannelloni Rossini</div>
+          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, béchamel and marinara</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Penne Caprese</div>
+          <div class="item-desc">Fresh mozzarella, ripe tomatoes and fragrant basil</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Penne Vodka</div>
+          <div class="item-desc">Light tomato and vodka cream sauce · add smoked salmon (+)</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Fettuccine Toscana</div>
+          <div class="item-desc">Asparagus and sun-dried tomatoes in a delicate light sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Pappardelle Bolognese</div>
+          <div class="item-desc">Wide ribbons of pasta with slow-braised meat sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Gnocchi di Patate</div>
+          <div class="item-desc">Pillowy potato dumplings with Parmesan, Emmental and Mozzarella sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Linguini Carbonara</div>
+          <div class="item-desc">Classic preparation with guanciale, egg and Pecorino Romano</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Bucatini Amatriciana</div>
+          <div class="item-desc">Spicy tomato with pancetta and shallot</div>
+        </div>
+      </div>
+      <div class="menu-footnote">✦ Contains seafood &nbsp;·&nbsp; Please inform your server of any allergies</div>
+    </div>
+
+    <!-- POLLO -->
+    <div class="menu-panel" id="panel-pollo">
+      <div class="panel-header">
+        <h3 class="panel-title">Pollo</h3>
+        <p class="panel-sub">Tender chicken, prepared with Italian finesse</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Chicken Francese</div>
+          <div class="item-desc">Chicken breast dipped in egg batter and sautéed in white wine and fresh lemon</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Cordon Bleu</div>
+          <div class="item-desc">Chicken breast enveloped with ham and Emmental cheese in white wine and mushrooms</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Tricolore</div>
+          <div class="item-desc">Chicken breast topped with red sauce, cherry tomatoes, basil and fresh buffalo mozzarella</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARNE & VITELLO -->
+    <div class="menu-panel" id="panel-carne">
+      <div class="panel-header">
+        <h3 class="panel-title">Carne &amp; Vitello</h3>
+        <p class="panel-sub">Beef and veal, prepared with classical Italian mastery</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Steak au Poivre</div>
+          <div class="item-desc">Black Angus Rib-Eye coated with crushed peppercorns in brandy cream sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Grilled Rib-Eye</div>
+          <div class="item-desc">Black Angus, grilled to your preference</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veal Piccata</div>
+          <div class="item-desc">Thin veal cutlets sautéed in fresh lemon and butter</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veal Finanziera</div>
+          <div class="item-desc">Sautéed in white wine and mushrooms</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veal Saltimbocca</div>
+          <div class="item-desc">Sautéed in butter and white wine, topped with ham, cheese and fresh herbs</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veal Kristy</div>
+          <div class="item-desc">Veal with artichoke hearts in a light Dijon mustard sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Sweetbreads Veneziana</div>
+          <div class="item-desc">Sautéed in butter, white wine and mushrooms</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Calves Brain</div>
+          <div class="item-desc">Sautéed in butter, lemon, capers and sun-dried tomatoes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PESCE -->
+    <div class="menu-panel" id="panel-pesce">
+      <div class="panel-header">
+        <h3 class="panel-title">Pesce</h3>
+        <p class="panel-sub">The finest catch, from sea to table</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Fish of the Day</div>
+          <div class="item-desc">Market price — ask your server for today's fresh selection</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Zuppa di Pesce</div>
+          <div class="item-desc">Mussels, clams, scallops, shrimp, lobster tail and langostino</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Shrimp Scampi</div>
+          <div class="item-desc">Shrimp with garlic butter and fresh herbs</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Shrimp Provençal</div>
+          <div class="item-desc">Sautéed in marinara, mushrooms and olives</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Terrine St. Jacques</div>
+          <div class="item-desc">Scallops, shrimp, mushrooms au gratin with béchamel and cheese</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">New Zealand Langostino</div>
+          <div class="item-desc">Grilled with lemon and extra virgin olive oil</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTORNI -->
+    <div class="menu-panel" id="panel-contorni">
+      <div class="panel-header">
+        <h3 class="panel-title">Contorni</h3>
+        <p class="panel-sub">Side dishes to complete your meal</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Sautéed Spinach</div>
+          <div class="item-desc">Wilted with garlic and extra virgin olive oil</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Baked Potato</div>
+          <div class="item-desc">Classic preparation with butter and sour cream</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Pasta</div>
+          <div class="item-desc">Ask your server for available preparations</div>
+        </div>
+      </div>
+      <div class="menu-footnote">A $5.00 sharing charge applies &nbsp;·&nbsp; Prices of daily specials vary — please ask your server &nbsp;·&nbsp; Gluten-free options available upon request</div>
+    </div>
+
+  </div><!-- /section-inner -->
+</section>
+
+
+<!-- ================================================
+     REVIEWS
+================================================ -->
+<section class="section reviews-section" id="reviews">
+  <div class="section-inner">
+    <span class="section-label">Quello Che Dicono i Nostri Ospiti</span>
+    <h2 class="section-title">A <em>Cherished</em> Experience</h2>
+    <div class="divider divider-center">
+      <span class="divider-line"></span>
+      <span class="divider-dot">✦</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Elegant, fine dining, exquisite service and wonderfully prepared meals. Our good fortune was being served by the daughter of the owner — she made us feel as though we were the most important people in the room."</p>
+        <div class="review-author">Saul E. &nbsp;·&nbsp; December 2023 &nbsp;·&nbsp; TripAdvisor</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"This unpretentious restaurant was founded in 1980 and has had the same chef since 1988. The fettucini with asparagus and tomatoes was sublime — maybe the best pasta dish I have ever eaten."</p>
+        <div class="review-author">dallasdr &nbsp;·&nbsp; March 2023 &nbsp;·&nbsp; TripAdvisor</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"IL GIRASOLE is our favorite restaurant. We have been going there for years. We have never had a bad meal nor bad service. It is an exceptional dining experience."</p>
+        <div class="review-author">Doris B. &nbsp;·&nbsp; December 2023 &nbsp;·&nbsp; TripAdvisor</div>
+      </div>
+    </div>
+
+    <div class="ta-footer">
+      <p>Rated <strong style="color:var(--gold-light)">4.4 of 5 stars</strong> across 131 reviews &nbsp;·&nbsp;
+         <a href="https://www.tripadvisor.com/Restaurant_Review-g34179-d11547854-Reviews-Il_Girasole-Delray_Beach_Florida.html" target="_blank" rel="noopener">Read all reviews on TripAdvisor →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     VISIT US
+================================================ -->
+<section class="section info-section" id="visit">
+  <div class="section-inner">
+    <span class="section-label">Vieni a Trovarci</span>
+    <h2 class="section-title">Visit <em>Il Girasole</em></h2>
+    <div class="divider">
+      <span class="divider-line"></span>
+      <span class="divider-dot">✦</span>
+    </div>
+
+    <div class="info-grid">
+
+      <!-- Hours -->
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div class="info-card-title">Hours of Operation</div>
+        <ul class="hours-list">
+          <li><span class="day">Sunday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Monday</span><span class="closed">Closed</span></li>
+          <li><span class="day">Tuesday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Wednesday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Thursday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Friday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Saturday</span><span>5:00 PM – 10:00 PM</span></li>
+        </ul>
+      </div>
+
+      <!-- Location -->
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div class="info-card-title">Location &amp; Contact</div>
+        <p class="addr-block">
+          2275 S Federal Highway, Suite 300<br>
+          Delray Beach, FL 33483
+        </p>
+        <a href="tel:+15612723566" class="big-phone">561.272.3566</a>
+        <a href="https://maps.google.com/maps?q=2275+S+Federal+Hwy+Suite+300,+Delray+Beach,+FL+33483" target="_blank" rel="noopener" class="text-link">Get Directions →</a>
+        <div class="amenity-list">
+          ✓ &nbsp;Free parking available<br>
+          ✓ &nbsp;Wheelchair accessible<br>
+          ✓ &nbsp;Wine &amp; beer served<br>
+          ✓ &nbsp;Vegetarian-friendly options<br>
+          ✓ &nbsp;Gluten-free options available
+        </div>
+      </div>
+
+      <!-- Takeout -->
+      <div class="info-card takeout-card">
+        <div class="info-icon">🥡</div>
+        <div class="info-card-title">Takeout Available</div>
+        <p>
+          Enjoy the authentic flavors of Il Girasole in the comfort of your home. Simply call us to place your order and we'll have it ready for pickup.
+        </p>
+        <p>
+          <strong>Tuesday – Sunday</strong><br>
+          5:00 PM – 9:30 PM
+        </p>
+        <a href="tel:+15612723566" class="takeout-cta">
+          Call to Order &nbsp;·&nbsp; 561.272.3566
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     MAP
+================================================ -->
+<div class="map-embed">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.4!2d-80.073!3d26.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d6b7c1e8f4a3%3A0x2b4a6f8e9c0d1e2f!2s2275%20S%20Federal%20Hwy%20%23300%2C%20Delray%20Beach%2C%20FL%2033483!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+    loading="lazy"
+    title="Il Girasole location map"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Il <em>Girasole</em></div>
+      <div class="footer-tagline">Ristorante Italiano · Delray Beach</div>
+      <p class="footer-about">
+        A family-owned Italian restaurant serving authentic cuisine with passion and tradition since 1980. Come for the food. Stay for the feeling of being home.
+      </p>
+    </div>
+    <div>
+      <div class="footer-heading">Navigate</div>
+      <ul class="footer-nav">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">Dinner Menu</a></li>
+        <li><a href="#reviews">Guest Reviews</a></li>
+        <li><a href="#visit">Hours &amp; Location</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <ul class="footer-contact">
+        <li>2275 S Federal Hwy, Suite 300<br>Delray Beach, FL 33483</li>
+        <li><a href="tel:+15612723566">561.272.3566</a></li>
+        <li style="margin-top:0.8rem; color:rgba(255,255,255,0.4);">
+          Tue – Sun: 5:00 PM – 10:00 PM<br>
+          <span style="color:#8B2E2E;">Closed Mondays</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Il Girasole Ristorante Italiano · Delray Beach, Florida</span>
+    <span>Dine-In &amp; Takeout · Tuesday – Sunday</span>
+  </div>
+</footer>
+
+
+<!-- ================================================
+     JAVASCRIPT
+================================================ -->
+<script>
+  // Navbar scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobClose   = document.getElementById('mobClose');
+
+  hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobClose.addEventListener('click',  () => mobileMenu.classList.remove('open'));
+
+  document.querySelectorAll('.mob-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Menu tabs
+  const tabBtns   = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.menu-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+
+  // Smooth anchor scrolling with offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 70;
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
