@@ -119,7 +119,7 @@
       position: fixed;
       inset: 0;
       background: var(--dark-green);
-      z-index: 999;
+      z-index: 1001;
       padding: 6rem 2rem 3rem;
       flex-direction: column;
       align-items: center;
@@ -993,7 +993,7 @@
       <div class="feature-icon">👨‍🍳</div>
       <div>
         <div class="feature-text-label">Our Kitchen</div>
-        <div class="feature-text-value">Same Chef Since 1988</div>
+        <div class="feature-text-value">Carrying On Our Founder's Legacy</div>
       </div>
     </div>
     <div class="feature-item">
@@ -1052,7 +1052,7 @@
         </blockquote>
 
         <p>
-          For over four decades, <strong>Il Girasole</strong> — <em>the sunflower</em> in Italian — has graced Delray Beach with an unwavering commitment to authentic Italian cuisine. Founded in 1980 and shaped by the same passionate chef since 1988, ours is a story written in garlic, olive oil, and love.
+          For over four decades, <strong>Il Girasole</strong> — <em>the sunflower</em> in Italian — has graced Delray Beach with an unwavering commitment to authentic Italian cuisine. Founded in 1980 and shaped by our founding chef's inspired legacy, ours is a story written in garlic, olive oil, and love.
         </p>
         <p>
           We believe fine dining should feel like visiting family. Every dish is prepared with the care and precision of generations of Italian tradition — from our hand-crafted pastas and delicate veal preparations to the freshest seafood from the day's catch. Come as a guest. Leave as family.
@@ -1087,35 +1087,35 @@
 <div class="photo-strip">
   <div class="photo-cell photo-bg-1">
     <img
-      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/fa/caption.jpg?w=900&h=600&s=1"
-      alt="Il Girasole dining room"
-      onerror="this.remove()"
+      src="images/salmon.jpg"
+      alt="Salmon with lemon butter"
+      onerror="this.style.display='none'"
     />
-    <div class="photo-label">The Dining Room</div>
+    <div class="photo-label">Fresh from the Sea</div>
   </div>
   <div class="photo-cell photo-bg-2">
     <img
-      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/f9/caption.jpg?w=500&h=320&s=1"
-      alt="Il Girasole ambiance"
-      onerror="this.remove()"
+      src="images/penne-vodka.jpg"
+      alt="Penne Vodka"
+      onerror="this.style.display='none'"
     />
-    <div class="photo-label">Intimate Ambiance</div>
+    <div class="photo-label">Pasta Perfetta</div>
   </div>
   <div class="photo-cell photo-bg-3">
     <img
-      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/f8/caption.jpg?w=500&h=320&s=1"
-      alt="Il Girasole cuisine"
-      onerror="this.remove()"
+      src="images/lamb.jpg"
+      alt="Rack of Lamb"
+      onerror="this.style.display='none'"
     />
-    <div class="photo-label">Authentic Cuisine</div>
+    <div class="photo-label">From the Kitchen</div>
   </div>
   <div class="photo-cell photo-bg-4">
     <img
-      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/74/04/5a/filename-giralsole-front.jpg?w=500&h=320&s=1"
-      alt="Il Girasole entrance"
-      onerror="this.remove()"
+      src="images/dessert.jpg"
+      alt="House-made desserts"
+      onerror="this.style.display='none'"
     />
-    <div class="photo-label">Since 1980</div>
+    <div class="photo-label">Dolci</div>
   </div>
 </div>
 
@@ -1142,6 +1142,7 @@
       <button class="tab-btn" data-tab="carne">Carne &amp; Vitello</button>
       <button class="tab-btn" data-tab="pesce">Pesce</button>
       <button class="tab-btn" data-tab="contorni">Contorni</button>
+      <button class="tab-btn" data-tab="dolci">Dolci</button>
     </div>
 
     <!-- ANTIPASTI -->
@@ -1233,6 +1234,10 @@
           <div class="item-name">Sliced Tomatoes</div>
           <div class="item-desc">Seasonal tomatoes with fresh herbs and extra virgin olive oil</div>
         </div>
+        <div class="menu-item">
+          <div class="item-name">Insalata Marc</div>
+          <div class="item-desc">A signature house salad — ask your server for today's preparation</div>
+        </div>
       </div>
     </div>
 
@@ -1269,7 +1274,7 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Penne Vodka</div>
-          <div class="item-desc">Light tomato and vodka cream sauce · add smoked salmon (+)</div>
+          <div class="item-desc">Light tomato and vodka cream sauce · add chicken (+)</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Fettuccine Toscana</div>
@@ -1416,6 +1421,41 @@
       <div class="menu-footnote">A $5.00 sharing charge applies &nbsp;·&nbsp; Prices of daily specials vary — please ask your server &nbsp;·&nbsp; Gluten-free options available upon request</div>
     </div>
 
+    <!-- DOLCI -->
+    <div class="menu-panel" id="panel-dolci">
+      <div class="panel-header">
+        <h3 class="panel-title">Dolci</h3>
+        <p class="panel-sub">A sweet ending to a perfect evening</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="item-name">Spumoni</div>
+          <div class="item-desc">Our legendary house-made Italian ice cream — a true Il Girasole tradition</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Tartufo</div>
+          <div class="item-desc">Chocolate-encased ice cream with cherries, drizzled with chocolate sauce</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Semifreddo ai Frutti di Bosco</div>
+          <div class="item-desc">Chilled white semifreddo with mixed berries and raspberry coulis</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Crostata al Cioccolato</div>
+          <div class="item-desc">Rich chocolate tart with vanilla ice cream and fresh strawberry</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Apple Strudel</div>
+          <div class="item-desc">Classic warm apple strudel with a dusting of powdered sugar</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Crème Caramel</div>
+          <div class="item-desc">Silky classic custard with caramel sauce</div>
+        </div>
+      </div>
+      <div class="menu-footnote">Dessert menu may vary daily · Ask your server for seasonal specials</div>
+    </div>
+
   </div><!-- /section-inner -->
 </section>
 
@@ -1534,7 +1574,7 @@
 ================================================ -->
 <div class="map-embed">
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.4!2d-80.073!3d26.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d6b7c1e8f4a3%3A0x2b4a6f8e9c0d1e2f!2s2275%20S%20Federal%20Hwy%20%23300%2C%20Delray%20Beach%2C%20FL%2033483!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+    src="https://maps.google.com/maps?q=2275+S+Federal+Hwy+Suite+300,+Delray+Beach,+FL+33483&output=embed"
     loading="lazy"
     title="Il Girasole location map"
     referrerpolicy="no-referrer-when-downgrade"
@@ -1576,7 +1616,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Il Girasole Ristorante Italiano · Delray Beach, Florida</span>
+    <span>© 2026 Il Girasole Ristorante Italiano · Delray Beach, Florida</span>
     <span>Dine-In &amp; Takeout · Tuesday – Sunday</span>
   </div>
 </footer>
