@@ -925,10 +925,14 @@
       .section { padding: 4rem 1.5rem; }
     }
   </style>
+  <style>
+    /* Summer promo bar nav fix */
+    #mainNav { top: 45px !important; }
+  </style>
 </head>
 <body>
   <!-- Summer Special Promo Bar -->
-  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:relative;z-index:1000;">
+  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:fixed;top:0;left:0;right:0;z-index:10000;">
     🌿 <strong>Summer Special</strong> &mdash; 3-Course Italian Dinner &bull; Only <strong>$55</strong> &bull; Daily 5:00&ndash;6:30 PM &nbsp;
     <button onclick="document.getElementById('summer-modal').style.display='flex'" style="background:#d4aa5a;color:#1a3a2a;border:none;padding:6px 18px;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;cursor:pointer;margin-left:10px;">VIEW MENU</button>
   </div>
