@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Il Girasole â Authentic Italian Cuisine Â· Delray Beach, FL</title>
-  <meta name="description" content="Il Girasole offers authentic Italian fine dining in Delray Beach, Florida. Family-owned since 1980. Open TuesdayâSunday, 5â10 PM. Takeout available. Call 561-272-3566." />
+  <title>Il Girasole — Authentic Italian Cuisine · Delray Beach, FL</title>
+  <meta name="description" content="Il Girasole offers authentic Italian fine dining in Delray Beach, Florida. Family-owned since 1980. Open Tuesday–Saturday, 5–10 PM. Takeout available. Call 561-272-3566." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -178,7 +178,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      /* Lush Italian evening gradient â works even if image fails to load */
+      /* Lush Italian evening gradient — works even if image fails to load */
       background:
         linear-gradient(160deg, rgba(26,48,34,0.72) 0%, rgba(107,31,31,0.55) 60%, rgba(26,48,34,0.80) 100%),
         url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/32/66/fa/caption.jpg?w=1400&h=900&s=1') center/cover no-repeat;
@@ -927,6 +927,64 @@
   </style>
 </head>
 <body>
+  <!-- Summer Special Promo Bar -->
+  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:relative;z-index:1000;">
+    🌿 <strong>Summer Special</strong> &mdash; 3-Course Italian Dinner &bull; Only <strong>$55</strong> &bull; Daily 5:00&ndash;6:30 PM &nbsp;
+    <button onclick="document.getElementById('summer-modal').style.display='flex'" style="background:#d4aa5a;color:#1a3a2a;border:none;padding:6px 18px;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;cursor:pointer;margin-left:10px;">VIEW MENU</button>
+  </div>
+
+  <!-- Summer Special Modal -->
+  <div id="summer-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#f5ead8;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;border-radius:4px;position:relative;font-family:'Playfair Display',serif;color:#1a3a2a;padding:40px 36px;">
+      <button onclick="document.getElementById('summer-modal').style.display='none'" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#1a3a2a;">&times;</button>
+      <div style="text-align:center;border-bottom:2px solid #d4aa5a;padding-bottom:20px;margin-bottom:24px;">
+        <p style="letter-spacing:0.15em;font-size:0.8rem;margin:0 0 4px">IL GIRASOLE &bull; ITALIAN FINE DINING</p>
+        <h2 style="font-size:2.8rem;margin:0;font-style:italic;color:#1a3a2a;">Summer</h2>
+        <h2 style="font-size:2rem;margin:0;letter-spacing:0.1em;color:#d4aa5a;">SPECIAL</h2>
+        <div style="background:#1a3a2a;color:#fff;padding:8px 20px;margin:16px auto;display:inline-block;letter-spacing:0.1em;font-size:0.9rem;">COMPLETE MENU &bull; ONLY <span style="color:#d4aa5a;font-size:1.3rem;font-weight:700;">$55</span></div>
+        <p style="font-style:italic;margin:10px 0 4px;font-size:0.95rem;">Enjoy a taste of Italy with our carefully crafted Summer Special.</p>
+        <div style="background:#1a3a2a;color:#fff;padding:8px 16px;margin:12px auto;display:inline-block;font-size:0.85rem;">
+          &#9201; &nbsp;<strong style="letter-spacing:0.08em;">AVAILABLE DAILY</strong><br>
+          <span style="color:#d4aa5a;font-size:1rem;">5:00PM &ndash; 6:30PM</span>
+        </div>
+      </div>
+      <div style="margin-bottom:20px;">
+        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:4px;">SOUP OR SALAD</h3>
+        <p style="color:#d4aa5a;font-size:0.8rem;letter-spacing:0.12em;margin:0 0 8px;">CHOOSE ONE</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Soup of the Day</p>
+        <p style="margin:3px 0;font-size:0.85rem;color:#666;">OR</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Cesar Salad</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Arugula Salad</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Mesculin Apple</p>
+      </div>
+      <hr style="border-color:#d4aa5a;margin:16px 0;">
+      <div style="margin-bottom:20px;">
+        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:4px;">ENTR&Eacute;E</h3>
+        <p style="color:#d4aa5a;font-size:0.8rem;letter-spacing:0.12em;margin:0 0 8px;">CHOOSE ONE</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Cannelloni Rossini</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Pappardelle Bolognese</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Penne Vodka</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Linguini with Clam Sauce <em style="font-size:0.85rem;">(Red or White)</em></p>
+        <p style="margin:3px 0;font-size:0.95rem;">Chicken Francese</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Chicken Pizzaioli</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Chicken Tricolor</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Veal Piccata</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Veal Finanziere</p>
+        <p style="margin:3px 0;font-size:0.95rem;">Veal Pizzaioli</p>
+      </div>
+      <hr style="border-color:#d4aa5a;margin:16px 0;">
+      <div>
+        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:8px;">DESSERT</h3>
+        <p style="margin:3px 0;font-size:0.95rem;">Dessert of the Day</p>
+      </div>
+      <div style="text-align:center;margin-top:24px;border-top:2px solid #d4aa5a;padding-top:20px;">
+        <p style="font-style:italic;color:#1a3a2a;font-size:0.9rem;">A Complete Italian Experience for just</p>
+        <p style="font-size:2.5rem;color:#d4aa5a;margin:4px 0;font-weight:700;">$55</p>
+        <p style="font-size:0.85rem;letter-spacing:0.05em;">Call to Reserve: <a href="tel:5612723566" style="color:#1a3a2a;">561.272.3566</a></p>
+      </div>
+    </div>
+  </div>
+
 
 <!-- ================================================
      NAVIGATION
@@ -949,7 +1007,7 @@
 
 <!-- Mobile Menu -->
 <div id="mobileMenu">
-  <button class="mob-close" id="mobClose">â</button>
+  <button class="mob-close" id="mobClose">✕</button>
   <a href="#about" class="mob-link">Our Story</a>
   <a href="#menu" class="mob-link">Menu</a>
   <a href="#reviews" class="mob-link">Reviews</a>
@@ -969,10 +1027,10 @@
     <p class="hero-subtitle">Ristorante Italiano</p>
     <div class="hero-ornament">
       <span class="hero-ornament-line"></span>
-      <span class="sunflower-icon">â¦</span>
+      <span class="sunflower-icon">✦</span>
       <span class="hero-ornament-line"></span>
     </div>
-    <p class="hero-tagline">Family Â· Owned &nbsp;Â·&nbsp; Fine Italian Cuisine &nbsp;Â·&nbsp; Est. 1980</p>
+    <p class="hero-tagline">Family · Owned &nbsp;·&nbsp; Fine Italian Cuisine &nbsp;·&nbsp; Est. 1980</p>
     <div class="hero-cta">
       <a href="#menu" class="btn btn-gold">Explore Our Menu</a>
       <a href="tel:+15612723566" class="btn btn-outline-white">Order Takeout</a>
@@ -980,7 +1038,7 @@
   </div>
   <div class="scroll-hint" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
     <span class="scroll-hint-label">Discover</span>
-    <span class="scroll-hint-arrow">â</span>
+    <span class="scroll-hint-arrow">↓</span>
   </div>
 </section>
 
@@ -991,31 +1049,31 @@
 <div class="feature-strip">
   <div class="feature-strip-inner">
     <div class="feature-item">
-      <div class="feature-icon">ð»</div>
+      <div class="feature-icon">🌻</div>
       <div>
         <div class="feature-text-label">Established</div>
         <div class="feature-text-value">Family-Owned Since 1980</div>
       </div>
     </div>
     <div class="feature-item">
-      <div class="feature-icon">ð¨âð³</div>
+      <div class="feature-icon">👨‍🍳</div>
       <div>
         <div class="feature-text-label">Our Kitchen</div>
         <div class="feature-text-value">Carrying On Our Founder's Legacy</div>
       </div>
     </div>
     <div class="feature-item">
-      <div class="feature-icon">ð·</div>
+      <div class="feature-icon">🍷</div>
       <div>
         <div class="feature-text-label">Service</div>
         <div class="feature-text-value">Dine-In &amp; Takeout Available</div>
       </div>
     </div>
     <div class="feature-item">
-      <div class="feature-icon">â­</div>
+      <div class="feature-icon">⭐</div>
       <div>
         <div class="feature-text-label">TripAdvisor</div>
-        <div class="feature-text-value">4.4 / 5 Â· 131 Reviews</div>
+        <div class="feature-text-value">4.4 / 5 · 131 Reviews</div>
       </div>
     </div>
   </div>
@@ -1047,23 +1105,23 @@
 
       <!-- Text -->
       <div class="about-text">
-        <span class="section-label">La Nostra Storia â Our Story</span>
+        <span class="section-label">La Nostra Storia — Our Story</span>
         <h2 class="section-title">A <em>Hidden Treasure</em><br>in South Florida</h2>
         <div class="divider">
           <span class="divider-line"></span>
-          <span class="divider-dot">â¦</span>
+          <span class="divider-dot">✦</span>
         </div>
 
         <blockquote class="pull-quote">
           "Inside, we stepped back into Italy. The service, the attention to the diners, was like finding a family."
-          <footer style="font-size:0.75rem; color: var(--text-light); margin-top:0.6rem; font-style:normal; letter-spacing:0.08em;">â MarciaS, TripAdvisor</footer>
+          <footer style="font-size:0.75rem; color: var(--text-light); margin-top:0.6rem; font-style:normal; letter-spacing:0.08em;">— MarciaS, TripAdvisor</footer>
         </blockquote>
 
         <p>
-          For over four decades, <strong>Il Girasole</strong> â <em>the sunflower</em> in Italian â has graced Delray Beach with an unwavering commitment to authentic Italian cuisine. Founded in 1980 and shaped by our founding chef's inspired legacy, ours is a story written in garlic, olive oil, and love.
+          For over four decades, <strong>Il Girasole</strong> — <em>the sunflower</em> in Italian — has graced Delray Beach with an unwavering commitment to authentic Italian cuisine. Founded in 1980 and shaped by our founding chef's inspired legacy, ours is a story written in garlic, olive oil, and love.
         </p>
         <p>
-          We believe fine dining should feel like visiting family. Every dish is prepared with the care and precision of generations of Italian tradition â from our hand-crafted pastas and delicate veal preparations to the freshest seafood from the day's catch. Come as a guest. Leave as family.
+          We believe fine dining should feel like visiting family. Every dish is prepared with the care and precision of generations of Italian tradition — from our hand-crafted pastas and delicate veal preparations to the freshest seafood from the day's catch. Come as a guest. Leave as family.
         </p>
         <p>
           Ranked among the <strong>top 40 restaurants in Delray Beach</strong> and honored with a <strong>TripAdvisor Travelers' Choice</strong> distinction, Il Girasole is the destination of discerning diners who value authenticity above all else.
@@ -1075,7 +1133,7 @@
             <div class="stat-lbl">Years Serving</div>
           </div>
           <div class="stat">
-            <div class="stat-num">4.4â</div>
+            <div class="stat-num">4.4★</div>
             <div class="stat-lbl">TripAdvisor</div>
           </div>
           <div class="stat">
@@ -1137,7 +1195,7 @@
     <h2 class="section-title">Our <em>Dinner Menu</em></h2>
     <div class="divider divider-center">
       <span class="divider-line"></span>
-      <span class="divider-dot">â¦</span>
+      <span class="divider-dot">✦</span>
       <span class="divider-line"></span>
     </div>
 
@@ -1186,7 +1244,7 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Cannelloni Rossini</div>
-          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, topped with bÃ©chamel and marinara</div>
+          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, topped with béchamel and marinara</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Roasted Pepper</div>
@@ -1244,7 +1302,7 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Insalata Marc</div>
-          <div class="item-desc">A signature house salad â ask your server for today's preparation</div>
+          <div class="item-desc">A signature house salad — ask your server for today's preparation</div>
         </div>
       </div>
     </div>
@@ -1257,24 +1315,24 @@
       </div>
       <div class="menu-grid">
         <div class="menu-item">
-          <div class="item-name">Capellini Gamberi â¦</div>
+          <div class="item-name">Capellini Gamberi ✦</div>
           <div class="item-desc">Angel hair pasta with shrimp in a light red sauce</div>
         </div>
         <div class="menu-item">
-          <div class="item-name">Linguine con Vongole â¦</div>
-          <div class="item-desc">Linguine with clam sauce â available in red or white</div>
+          <div class="item-name">Linguine con Vongole ✦</div>
+          <div class="item-desc">Linguine with clam sauce — available in red or white</div>
         </div>
         <div class="menu-item">
-          <div class="item-name">Linguine Pescatora â¦</div>
+          <div class="item-name">Linguine Pescatora ✦</div>
           <div class="item-desc">Clams, mussels, shrimp, scallops and langostino in red sauce</div>
         </div>
         <div class="menu-item">
-          <div class="item-name">Tagliolini Astice â¦</div>
+          <div class="item-name">Tagliolini Astice ✦</div>
           <div class="item-desc">Lobster in a delicate brandy shallot sauce</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Cannelloni Rossini</div>
-          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, bÃ©chamel and marinara</div>
+          <div class="item-desc">Fresh pasta filled with spinach, ricotta and herbs, béchamel and marinara</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Penne Caprese</div>
@@ -1282,7 +1340,7 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Penne Vodka</div>
-          <div class="item-desc">Light tomato and vodka cream sauce Â· add chicken (+)</div>
+          <div class="item-desc">Light tomato and vodka cream sauce · add chicken (+)</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Fettuccine Toscana</div>
@@ -1305,7 +1363,7 @@
           <div class="item-desc">Spicy tomato with pancetta and shallot</div>
         </div>
       </div>
-      <div class="menu-footnote">â¦ Contains seafood &nbsp;Â·&nbsp; Please inform your server of any allergies</div>
+      <div class="menu-footnote">✦ Contains seafood &nbsp;·&nbsp; Please inform your server of any allergies</div>
     </div>
 
     <!-- POLLO -->
@@ -1317,7 +1375,7 @@
       <div class="menu-grid">
         <div class="menu-item">
           <div class="item-name">Chicken Francese</div>
-          <div class="item-desc">Chicken breast dipped in egg batter and sautÃ©ed in white wine and fresh lemon</div>
+          <div class="item-desc">Chicken breast dipped in egg batter and sautéed in white wine and fresh lemon</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Chicken Cordon Bleu</div>
@@ -1347,15 +1405,15 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Veal Piccata</div>
-          <div class="item-desc">Thin veal cutlets sautÃ©ed in fresh lemon and butter</div>
+          <div class="item-desc">Thin veal cutlets sautéed in fresh lemon and butter</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Veal Finanziera</div>
-          <div class="item-desc">SautÃ©ed in white wine and mushrooms</div>
+          <div class="item-desc">Sautéed in white wine and mushrooms</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Veal Saltimbocca</div>
-          <div class="item-desc">SautÃ©ed in butter and white wine, topped with ham, cheese and fresh herbs</div>
+          <div class="item-desc">Sautéed in butter and white wine, topped with ham, cheese and fresh herbs</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Veal Kristy</div>
@@ -1363,11 +1421,11 @@
         </div>
         <div class="menu-item">
           <div class="item-name">Sweetbreads Veneziana</div>
-          <div class="item-desc">SautÃ©ed in butter, white wine and mushrooms</div>
+          <div class="item-desc">Sautéed in butter, white wine and mushrooms</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Calves Brain</div>
-          <div class="item-desc">SautÃ©ed in butter, lemon, capers and sun-dried tomatoes</div>
+          <div class="item-desc">Sautéed in butter, lemon, capers and sun-dried tomatoes</div>
         </div>
       </div>
     </div>
@@ -1381,7 +1439,7 @@
       <div class="menu-grid">
         <div class="menu-item">
           <div class="item-name">Fish of the Day</div>
-          <div class="item-desc">Market price â ask your server for today's fresh selection</div>
+          <div class="item-desc">Market price — ask your server for today's fresh selection</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Zuppa di Pesce</div>
@@ -1392,12 +1450,12 @@
           <div class="item-desc">Shrimp with garlic butter and fresh herbs</div>
         </div>
         <div class="menu-item">
-          <div class="item-name">Shrimp ProvenÃ§al</div>
-          <div class="item-desc">SautÃ©ed in marinara, mushrooms and olives</div>
+          <div class="item-name">Shrimp Provençal</div>
+          <div class="item-desc">Sautéed in marinara, mushrooms and olives</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Terrine St. Jacques</div>
-          <div class="item-desc">Scallops, shrimp, mushrooms au gratin with bÃ©chamel and cheese</div>
+          <div class="item-desc">Scallops, shrimp, mushrooms au gratin with béchamel and cheese</div>
         </div>
         <div class="menu-item">
           <div class="item-name">New Zealand Langostino</div>
@@ -1414,7 +1472,7 @@
       </div>
       <div class="menu-grid">
         <div class="menu-item">
-          <div class="item-name">SautÃ©ed Spinach</div>
+          <div class="item-name">Sautéed Spinach</div>
           <div class="item-desc">Wilted with garlic and extra virgin olive oil</div>
         </div>
         <div class="menu-item">
@@ -1426,7 +1484,7 @@
           <div class="item-desc">Ask your server for available preparations</div>
         </div>
       </div>
-      <div class="menu-footnote">A $5.00 sharing charge applies &nbsp;Â·&nbsp; Prices of daily specials vary â please ask your server &nbsp;Â·&nbsp; Gluten-free options available upon request</div>
+      <div class="menu-footnote">A $5.00 sharing charge applies &nbsp;·&nbsp; Prices of daily specials vary — please ask your server &nbsp;·&nbsp; Gluten-free options available upon request</div>
     </div>
 
     <!-- DOLCI -->
@@ -1438,7 +1496,7 @@
       <div class="menu-grid">
         <div class="menu-item">
           <div class="item-name">Spumoni</div>
-          <div class="item-desc">Our legendary house-made Italian ice cream â a true Il Girasole tradition</div>
+          <div class="item-desc">Our legendary house-made Italian ice cream — a true Il Girasole tradition</div>
         </div>
         <div class="menu-item">
           <div class="item-name">Tartufo</div>
@@ -1457,11 +1515,11 @@
           <div class="item-desc">Classic warm apple strudel with a dusting of powdered sugar</div>
         </div>
         <div class="menu-item">
-          <div class="item-name">CrÃ¨me Caramel</div>
+          <div class="item-name">Crème Caramel</div>
           <div class="item-desc">Silky classic custard with caramel sauce</div>
         </div>
       </div>
-      <div class="menu-footnote">Dessert menu may vary daily Â· Ask your server for seasonal specials</div>
+      <div class="menu-footnote">Dessert menu may vary daily · Ask your server for seasonal specials</div>
     </div>
 
   </div><!-- /section-inner -->
@@ -1477,31 +1535,31 @@
     <h2 class="section-title">A <em>Cherished</em> Experience</h2>
     <div class="divider divider-center">
       <span class="divider-line"></span>
-      <span class="divider-dot">â¦</span>
+      <span class="divider-dot">✦</span>
       <span class="divider-line"></span>
     </div>
 
     <div class="reviews-grid">
       <div class="review-card">
-        <div class="review-stars">âââââ</div>
-        <p class="review-text">"Elegant, fine dining, exquisite service and wonderfully prepared meals. Our good fortune was being served by the daughter of the owner â she made us feel as though we were the most important people in the room."</p>
-        <div class="review-author">Saul E. &nbsp;Â·&nbsp; December 2023 &nbsp;Â·&nbsp; TripAdvisor</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Elegant, fine dining, exquisite service and wonderfully prepared meals. Our good fortune was being served by the daughter of the owner — she made us feel as though we were the most important people in the room."</p>
+        <div class="review-author">Saul E. &nbsp;·&nbsp; December 2023 &nbsp;·&nbsp; TripAdvisor</div>
       </div>
       <div class="review-card">
-        <div class="review-stars">âââââ</div>
-        <p class="review-text">"This unpretentious restaurant was founded in 1980 and has had the same chef since 1988. The fettucini with asparagus and tomatoes was sublime â maybe the best pasta dish I have ever eaten."</p>
-        <div class="review-author">dallasdr &nbsp;Â·&nbsp; March 2023 &nbsp;Â·&nbsp; TripAdvisor</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"This unpretentious restaurant was founded in 1980 and has had the same chef since 1988. The fettucini with asparagus and tomatoes was sublime — maybe the best pasta dish I have ever eaten."</p>
+        <div class="review-author">dallasdr &nbsp;·&nbsp; March 2023 &nbsp;·&nbsp; TripAdvisor</div>
       </div>
       <div class="review-card">
-        <div class="review-stars">âââââ</div>
+        <div class="review-stars">★★★★★</div>
         <p class="review-text">"IL GIRASOLE is our favorite restaurant. We have been going there for years. We have never had a bad meal nor bad service. It is an exceptional dining experience."</p>
-        <div class="review-author">Doris B. &nbsp;Â·&nbsp; December 2023 &nbsp;Â·&nbsp; TripAdvisor</div>
+        <div class="review-author">Doris B. &nbsp;·&nbsp; December 2023 &nbsp;·&nbsp; TripAdvisor</div>
       </div>
     </div>
 
     <div class="ta-footer">
-      <p>Rated <strong style="color:var(--gold-light)">4.4 of 5 stars</strong> across 131 reviews &nbsp;Â·&nbsp;
-         <a href="https://www.tripadvisor.com/Restaurant_Review-g34179-d11547854-Reviews-Il_Girasole-Delray_Beach_Florida.html" target="_blank" rel="noopener">Read all reviews on TripAdvisor â</a>
+      <p>Rated <strong style="color:var(--gold-light)">4.4 of 5 stars</strong> across 131 reviews &nbsp;·&nbsp;
+         <a href="https://www.tripadvisor.com/Restaurant_Review-g34179-d11547854-Reviews-Il_Girasole-Delray_Beach_Florida.html" target="_blank" rel="noopener">Read all reviews on TripAdvisor →</a>
       </p>
     </div>
   </div>
@@ -1517,58 +1575,58 @@
     <h2 class="section-title">Visit <em>Il Girasole</em></h2>
     <div class="divider">
       <span class="divider-line"></span>
-      <span class="divider-dot">â¦</span>
+      <span class="divider-dot">✦</span>
     </div>
 
     <div class="info-grid">
 
       <!-- Hours -->
       <div class="info-card">
-        <div class="info-icon">ð</div>
+        <div class="info-icon">🕐</div>
         <div class="info-card-title">Hours of Operation</div>
         <ul class="hours-list">
-          <li><span class="day">Sunday</span><span>5:00 PM â 10:00 PM</span></li>
+          <li><span class="day">Sunday</span><span>5:00 PM – 10:00 PM</span></li>
           <li><span class="day">Monday</span><span class="closed">Closed</span></li>
-          <li><span class="day">Tuesday</span><span>5:00 PM â 10:00 PM</span></li>
-          <li><span class="day">Wednesday</span><span>5:00 PM â 10:00 PM</span></li>
-          <li><span class="day">Thursday</span><span>5:00 PM â 10:00 PM</span></li>
-          <li><span class="day">Friday</span><span>5:00 PM â 10:00 PM</span></li>
-          <li><span class="day">Saturday</span><span>5:00 PM â 10:00 PM</span></li>
+          <li><span class="day">Tuesday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Wednesday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Thursday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Friday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Saturday</span><span>5:00 PM – 10:00 PM</span></li>
         </ul>
       </div>
 
       <!-- Location -->
       <div class="info-card">
-        <div class="info-icon">ð</div>
+        <div class="info-icon">📍</div>
         <div class="info-card-title">Location &amp; Contact</div>
         <p class="addr-block">
           2275 S Federal Highway, Suite 300<br>
           Delray Beach, FL 33483
         </p>
         <a href="tel:+15612723566" class="big-phone">561.272.3566</a>
-        <a href="https://maps.google.com/maps?q=2275+S+Federal+Hwy+Suite+300,+Delray+Beach,+FL+33483" target="_blank" rel="noopener" class="text-link">Get Directions â</a>
+        <a href="https://maps.google.com/maps?q=2275+S+Federal+Hwy+Suite+300,+Delray+Beach,+FL+33483" target="_blank" rel="noopener" class="text-link">Get Directions →</a>
         <div class="amenity-list">
-          â &nbsp;Free parking available<br>
-          â &nbsp;Wheelchair accessible<br>
-          â &nbsp;Wine &amp; beer served<br>
-          â &nbsp;Vegetarian-friendly options<br>
-          â &nbsp;Gluten-free options available
+          ✓ &nbsp;Free parking available<br>
+          ✓ &nbsp;Wheelchair accessible<br>
+          ✓ &nbsp;Wine &amp; beer served<br>
+          ✓ &nbsp;Vegetarian-friendly options<br>
+          ✓ &nbsp;Gluten-free options available
         </div>
       </div>
 
       <!-- Takeout -->
       <div class="info-card takeout-card">
-        <div class="info-icon">ð¥¡</div>
+        <div class="info-icon">🥡</div>
         <div class="info-card-title">Takeout Available</div>
         <p>
           Enjoy the authentic flavors of Il Girasole in the comfort of your home. Simply call us to place your order and we'll have it ready for pickup.
         </p>
         <p>
-          <strong>Tuesday â Sunday</strong><br>
-          5:00 PM â 9:30 PM
+          <strong>Tuesday – Sunday</strong><br>
+          5:00 PM – 9:30 PM
         </p>
         <a href="tel:+15612723566" class="takeout-cta">
-          Call to Order &nbsp;Â·&nbsp; 561.272.3566
+          Call to Order &nbsp;·&nbsp; 561.272.3566
         </a>
       </div>
 
@@ -1597,7 +1655,7 @@
   <div class="footer-grid">
     <div>
       <div class="footer-logo">Il <em>Girasole</em></div>
-      <div class="footer-tagline">Ristorante Italiano Â· Delray Beach</div>
+      <div class="footer-tagline">Ristorante Italiano · Delray Beach</div>
       <p class="footer-about">
         A family-owned Italian restaurant serving authentic cuisine with passion and tradition since 1980. Come for the food. Stay for the feeling of being home.
       </p>
@@ -1617,15 +1675,15 @@
         <li>2275 S Federal Hwy, Suite 300<br>Delray Beach, FL 33483</li>
         <li><a href="tel:+15612723566">561.272.3566</a></li>
         <li style="margin-top:0.8rem; color:rgba(255,255,255,0.4);">
-          Tue â Sun: 5:00 PM â 10:00 PM<br>
-          <span style="color:#8B2E2E;">Closed Sundays & Mondays</span>
+          Tue – Sat: 5:00 PM – 10:00 PM<br>
+          <span style="color:#8B2E2E;">Closed Sundays &amp; Mondays</span>
         </li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>Â© 2026 Il Girasole Ristorante Italiano Â· Delray Beach, Florida</span>
-    <span>Dine-In &amp; Takeout Â· Tuesday â Sunday</span>
+    <span>© 2026 Il Girasole Ristorante Italiano · Delray Beach, Florida</span>
+    <span>Dine-In &amp; Takeout · Tuesday – Saturday</span>
   </div>
 </footer>
 
