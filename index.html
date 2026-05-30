@@ -925,14 +925,10 @@
       .section { padding: 4rem 1.5rem; }
     }
   </style>
-  <style>
-    /* Summer promo bar nav fix */
-    nav, header nav, .nav { top: 45px !important; }
-  </style>
 </head>
 <body>
   <!-- Summer Special Promo Bar -->
-  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:fixed;top:0;left:0;right:0;z-index:10000;">
+  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:relative;z-index:1000;">
     🌿 <strong>Summer Special</strong> &mdash; 3-Course Italian Dinner &bull; Only <strong>$55</strong> &bull; Daily 5:00&ndash;6:30 PM &nbsp;
     <button onclick="document.getElementById('summer-modal').style.display='flex'" style="background:#d4aa5a;color:#1a3a2a;border:none;padding:6px 18px;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;cursor:pointer;margin-left:10px;">VIEW MENU</button>
   </div>
@@ -1589,7 +1585,7 @@
         <div class="info-icon">🕐</div>
         <div class="info-card-title">Hours of Operation</div>
         <ul class="hours-list">
-          <li><span class="day">Sunday</span><span>5:00 PM – 10:00 PM</span></li>
+          <li><span class="day">Sunday</span><span class="closed">Closed</span></li>
           <li><span class="day">Monday</span><span class="closed">Closed</span></li>
           <li><span class="day">Tuesday</span><span>5:00 PM – 10:00 PM</span></li>
           <li><span class="day">Wednesday</span><span>5:00 PM – 10:00 PM</span></li>
@@ -1626,7 +1622,7 @@
           Enjoy the authentic flavors of Il Girasole in the comfort of your home. Simply call us to place your order and we'll have it ready for pickup.
         </p>
         <p>
-          <strong>Tuesday – Sunday</strong><br>
+          <strong>Tuesday – Saturday</strong><br>
           5:00 PM – 9:30 PM
         </p>
         <a href="tel:+15612723566" class="takeout-cta">
