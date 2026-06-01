@@ -18,6 +18,20 @@
     gtag('config', 'AW-18126185157');
   </script>
 
+  <!-- Phone click conversion tracking -->
+  <script>
+      document.addEventListener('click', function(e) {
+            var el = e.target.closest('a[href^="tel:"]');
+            if (el) {
+                    gtag('event', 'conversion', {
+                              'send_to': 'AW-18126185157/x4vKCNKa67UcEMXFnsND',
+                              'value': 1.0,
+                              'currency': 'USD'
+                    });
+            }
+      });
+  </script>
+
   <style>
     /* ================================================
        RESET & ROOT
