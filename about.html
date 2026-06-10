@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us â Il Girasole | Family-Owned Italian Restaurant Since 1980</title>
+  <meta name="description" content="Il Girasole has been serving authentic Italian cuisine in Delray Beach since 1980. A family-owned fine dining destination beloved by the South Florida community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126185157"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18126185157');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF5EB; --parchment: #F2E8D0; --gold: #B8913A; --gold-light: #D4AA5A;
+      --dark-green: #1A3022; --mid-green: #2D5040; --border: #D4C4A0;
+    }
+    body { background: var(--dark-green); color: var(--cream); font-family: 'Lato', sans-serif; min-height: 100vh; }
+    header { background: var(--dark-green); border-bottom: 1px solid rgba(212,170,90,0.3); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-light); text-decoration: none; letter-spacing: 0.05em; }
+    nav a { color: var(--cream); text-decoration: none; font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 28px; opacity: 0.85; }
+    nav a:hover { color: var(--gold-light); opacity: 1; }
+    .hero { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid rgba(212,170,90,0.2); }
+    .hero-eyebrow { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: var(--cream); }
+    .hero p { margin-top: 12px; color: rgba(250,245,235,0.7); font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+    .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    .story-section { margin-bottom: 52px; }
+    .gold-rule { width: 48px; height: 2px; background: var(--gold); margin: 0 0 28px 0; }
+    .section-label { font-family: 'Lato', sans-serif; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 14px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; color: var(--cream); margin-bottom: 20px; }
+    p { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.8; color: rgba(250,245,235,0.8); margin-bottom: 16px; }
+    .pull-quote { border-left: 3px solid var(--gold); padding-left: 24px; margin: 40px 0; }
+    .pull-quote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.35rem; color: var(--cream); line-height: 1.6; }
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 48px 0; }
+    .stat { text-align: center; padding: 28px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(212,170,90,0.2); border-radius: 4px; }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold-light); display: block; margin-bottom: 6px; }
+    .stat-label { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(250,245,235,0.55); }
+    .cta-bar { background: rgba(212,170,90,0.1); border: 1px solid rgba(212,170,90,0.3); border-radius: 4px; padding: 36px; text-align: center; margin-top: 48px; }
+    .cta-bar p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 20px; }
+    .btn { display: inline-block; padding: 13px 34px; font-family: 'Lato', sans-serif; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; font-weight: 700; border-radius: 2px; margin: 6px; }
+    .btn-gold { background: var(--gold); color: var(--dark-green); }
+    .btn-gold:hover { background: var(--gold-light); }
+    .btn-outline { background: transparent; color: var(--gold-light); border: 1px solid var(--gold); }
+    footer { background: rgba(0,0,0,0.25); border-top: 1px solid rgba(212,170,90,0.2); text-align: center; padding: 30px 20px; font-family: 'Lato', sans-serif; font-size: 0.8rem; color: rgba(250,245,235,0.5); letter-spacing: 0.08em; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    @media (max-width: 600px) { .stats-row { grid-template-columns: 1fr; } header { padding: 16px 20px; } nav a { margin-left: 14px; font-size: 0.75rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">Il Girasole</a>
+    <nav>
+      <a href="/menu.html">Menu</a>
+      <a href="/reservations.html">Reservations</a>
+      <a href="/hours.html">Hours</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="hero-eyebrow">Our Story</p>
+    <h1>About Il Girasole</h1>
+    <p>Family-owned and lovingly crafted since 1980.</p>
+  </div>
+
+  <div class="container">
+
+    <div class="stats-row">
+      <div class="stat"><span class="stat-number">1980</span><span class="stat-label">Est. in Delray Beach</span></div>
+      <div class="stat"><span class="stat-number">45+</span><span class="stat-label">Years of Excellence</span></div>
+      <div class="stat"><span class="stat-number">Family</span><span class="stat-label">Owned &amp; Operated</span></div>
+    </div>
+
+    <div class="story-section">
+      <div class="section-label">Our Heritage</div>
+      <div class="gold-rule"></div>
+      <h2>A Tradition of Authentic Italian Cuisine</h2>
+      <p>Il Girasole â Italian for "the sunflower" â has been a cornerstone of fine dining in Delray Beach since 1980. What began as a dream to bring the true flavors of Italy to South Florida has grown into one of the area's most beloved and enduring dining destinations.</p>
+      <p>For over four decades, our family has been dedicated to one simple promise: cooking with love, using the finest ingredients, and welcoming every guest as if they were comin` home.</p>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>"We don't just serve Italian food â we share a piece of our family history with every plate."</blockquote>
+    </div>
+
+    <div class="story-section">
+      <div class="section-label">Our Philosophy</div>
+      <div class="gold-rule"></div>
+      <h2>Fresh. Authentic. From the Heart.</h2>
+      <p>Our kitchen is built on the foundations of traditional Italian cooking â slow-braised sauces, house-made pastas, the freshest seafood, and premium cuts of veal and beef. Every dish is prepared to order, with recipes passed down through generations.</p>
+      <p>We source the finest ingredients: San Marzano tomatoes, imported Parmigiano Reggiano, fresh local seafood, and extra virgin olive oil. Nothing from a can, nothing from a shortcut. Just honest, soulful Italian cooking.</p>
+    </div>
+
+    <div class="story-section">
+      <div class="section-label">Our Home</div>
+      <div class="gold-rule"></div>
+      <h2>Delray Beach Since 1980</h2>
+      <p>We are proud to call Delray Beach home. Our dining room is intimate and warm â the kind of place where you can celebrate a birthday, enjoy a romantic evening, or simply gather with people you love over great food and wine.</p>
+      <p>Whether you're a longtime regular or visiting for the first time, you'll find the same warmth, the same quality, and the same passion that has defined Il Girasole for over 45 years.</p>
+    </div>
+
+    <div class="cta-bar">
+      <p>Come experience Il Girasole for yourself.</p>
+      <a href="/reservations.html" class="btn btn-gold">Reserve a Table</a>
+      <a href="/menu.html" class="btn btn-outline">View Our Menu</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>2275 S Federal Hwy, Delray Beach, FL 33483 &nbsp;|&nbsp; <a href="tel:5612723566">(561) 272-3566</a> &nbsp;|&nbsp; TueâSat 5â10 PM</p>
+    <p style="margin-top:8px;"><a href="/">â Back to Homepage</a></p>
+  </footer>
+</body>
+</html>
