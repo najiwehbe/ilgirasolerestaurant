@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations â Il Girasole | Italian Restaurant Delray Beach</title>
+  <meta name="description" content="Reserve your table at Il Girasole in Delray Beach. Call (561) 272-3566. Fine Italian dining, open TuesdayâSaturday 5â10 PM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18126185157"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18126185157');
+    gtag('event', 'conversion', {'send_to': 'AW-18126185157'});
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF5EB; --gold: #B8913A; --gold-light: #D4AA5A;
+      --dark-green: #1A3022; --mid-green: #2D5040;
+    }
+    body { background: var(--dark-green); color: var(--cream); font-family: 'Lato', sans-serif; min-height: 100vh; }
+    header { background: var(--dark-green); border-bottom: 1px solid rgba(212,170,90,0.3); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-light); text-decoration: none; letter-spacing: 0.05em; }
+    nav a { color: var(--cream); text-decoration: none; font-family: 'Lato', sans-serif; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 28px; opacity: 0.85; }
+    nav a:hover { color: var(--gold-light); opacity: 1; }
+
+    /* HERO â phone front and center */
+    .hero { text-align: center; padding: 70px 24px 60px; }
+    .eyebrow { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 18px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 14px; }
+    .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: rgba(250,245,235,0.7); margin-bottom: 40px; }
+
+    .phone-hero { display: block; margin-bottom: 10px; }
+    .phone-hero a {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      color: var(--gold-light);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 2px solid rgba(212,170,90,0.4);
+      padding-bottom: 6px;
+    }
+    .phone-hero a:hover { color: var(--cream); }
+    .phone-label { font-family: 'Lato', sans-serif; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,245,235,0.5); margin-top: 10px; margin-bottom: 32px; }
+
+    .btn-call {
+      display: inline-block;
+      padding: 18px 56px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 2px;
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+    .btn-call:hover { background: var(--gold-light); }
+
+    .divider { width: 60px; height: 1px; background: var(--gold); margin: 52px auto; opacity: 0.35; }
+
+    /* Info cards */
+    .cards { max-width: 680px; margin: 0 auto; padding: 0 24px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,170,90,0.22); border-radius: 6px; padding: 28px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 14px; }
+    .hours-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(212,170,90,0.1); font-size: 0.9rem; }
+    .hours-row:last-child { border-bottom: none; }
+    .day { color: rgba(250,245,235,0.65); }
+    .time { color: var(--cream); }
+    .closed { color: rgba(250,245,235,0.3); }
+    .card p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(250,245,235,0.7); line-height: 1.7; }
+    .note { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(250,245,235,0.5); font-style: italic; max-width: 680px; margin: 0 auto 60px; padding: 0 24px; }
+
+    footer { background: rgba(0,0,0,0.25); border-top: 1px solid rgba(212,170,90,0.2); text-align: center; padding: 30px 20px; font-family: 'Lato', sans-serif; font-size: 0.8rem; color: rgba(250,245,235,0.5); letter-spacing: 0.08em; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    @media (max-width: 600px) { header { padding: 16px 20px; } nav a { margin-left: 16px; font-size: 0.75rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">Il Girasole</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/menu.html">Menu</a>
+      <a href="/hours.html">Hours</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="eyebrow">We look forward to seeing you</p>
+    <h1>Make a Reservation</h1>
+    <p class="hero-sub">Call us directly and we'll take care of everything.</p>
+
+    <div class="phone-hero">
+      <a href="tel:5612723566">(561) 272-3566</a>
+    </div>
+    <p class="phone-label">Call to reserve your table</p>
+
+    <a href="tel:5612723566" class="btn-call">Call Now</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">Dining Hours</div>
+      <div class="hours-row"><span class="day">Tue â Sat</span><span class="time">5:00 â 10:00 PM</span></div>
+      <div class="hours-row"><span class="day">Sunday</span><span class="closed">Closed</span></div>
+      <div class="hours-row"><span class="day">Monday</span><span class="closed">Closed</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Good to Know</div>
+      <p>For parties of 8 or more, please call ahead so we can best accommodate your group.</p>
+    </div>
+  </div>
+
+  <p class="note">Takeout available TuesdayâSaturday. Please call ahead.</p>
+
+  <footer>
+    <p>2275 S Federal Hwy, Delray Beach, FL 33483 &nbsp;|&nbsp; <a href="tel:5612723566">(561) 272-3566</a> &nbsp;|&nbsp; TueâSat 5â10 PM</p>
+    <p style="margin-top:8px;"><a href="/">&#8592; Back to Homepage</a></p>
+  </footer>
+</body>
+</html>
