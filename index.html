@@ -939,71 +939,8 @@
       .section { padding: 4rem 1.5rem; }
     }
   </style>
-  <style>
-    /* Summer promo bar nav fix */
-    #mainNav { top: 45px !important; }
-  </style>
 </head>
 <body>
-  <!-- Summer Special Promo Bar -->
-  <div id="summer-promo-bar" style="background:#1a3a2a;color:#d4aa5a;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;font-size:0.95rem;letter-spacing:0.05em;position:fixed;top:0;left:0;right:0;z-index:10000;">
-    🌿 <strong>Summer Special</strong> &mdash; 3-Course Italian Dinner &bull; Only <strong>$55</strong> &bull; Tue &ndash; Thu 5:00&ndash;6:30 PM &nbsp;
-    <button onclick="document.getElementById('summer-modal').style.display='flex'" style="background:#d4aa5a;color:#1a3a2a;border:none;padding:6px 18px;font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;cursor:pointer;margin-left:10px;">VIEW MENU</button>
-  </div>
-
-  <!-- Summer Special Modal -->
-  <div id="summer-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;" onclick="if(event.target===this)this.style.display='none'">
-    <div style="background:#f5ead8;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;border-radius:4px;position:relative;font-family:'Playfair Display',serif;color:#1a3a2a;padding:40px 36px;">
-      <button onclick="document.getElementById('summer-modal').style.display='none'" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#1a3a2a;">&times;</button>
-      <div style="text-align:center;border-bottom:2px solid #d4aa5a;padding-bottom:20px;margin-bottom:24px;">
-        <p style="letter-spacing:0.15em;font-size:0.8rem;margin:0 0 4px">IL GIRASOLE &bull; ITALIAN FINE DINING</p>
-        <h2 style="font-size:2.8rem;margin:0;font-style:italic;color:#1a3a2a;">Summer</h2>
-        <h2 style="font-size:2rem;margin:0;letter-spacing:0.1em;color:#d4aa5a;">SPECIAL</h2>
-        <div style="background:#1a3a2a;color:#fff;padding:8px 20px;margin:16px auto;display:inline-block;letter-spacing:0.1em;font-size:0.9rem;">COMPLETE MENU &bull; ONLY <span style="color:#d4aa5a;font-size:1.3rem;font-weight:700;">$55</span></div>
-        <p style="font-style:italic;margin:10px 0 4px;font-size:0.95rem;">Enjoy a taste of Italy with our carefully crafted Summer Special.</p>
-        <div style="background:#1a3a2a;color:#fff;padding:8px 16px;margin:12px auto;display:inline-block;font-size:0.85rem;">
-          &#9201; &nbsp;<strong style="letter-spacing:0.08em;">TUE &ndash; THU</strong><br>
-          <span style="color:#d4aa5a;font-size:1rem;">5:00PM &ndash; 6:30PM</span>
-        </div>
-      </div>
-      <div style="margin-bottom:20px;">
-        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:4px;">SOUP OR SALAD</h3>
-        <p style="color:#d4aa5a;font-size:0.8rem;letter-spacing:0.12em;margin:0 0 8px;">CHOOSE ONE</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Soup of the Day</p>
-        <p style="margin:3px 0;font-size:0.85rem;color:#666;">OR</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Cesar Salad</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Arugula Salad</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Mesculin Apple</p>
-      </div>
-      <hr style="border-color:#d4aa5a;margin:16px 0;">
-      <div style="margin-bottom:20px;">
-        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:4px;">ENTR&Eacute;E</h3>
-        <p style="color:#d4aa5a;font-size:0.8rem;letter-spacing:0.12em;margin:0 0 8px;">CHOOSE ONE</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Cannelloni Rossini</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Penne Bolognese</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Penne Vodka</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Linguini with Clam Sauce <em style="font-size:0.85rem;">(Red or White)</em></p>
-        <p style="margin:3px 0;font-size:0.95rem;">Chicken Francese</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Chicken Pizzaioli</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Chicken Tricolor</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Veal Piccata</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Veal Finanziere</p>
-        <p style="margin:3px 0;font-size:0.95rem;">Veal Pizzaioli</p>
-      </div>
-      <p style="margin:2px 0 0 0;font-style:italic;">Fish of the Day</p>
-      <hr style="border-color:#d4aa5a;margin:16px 0;">
-      <div>
-        <h3 style="letter-spacing:0.1em;font-size:1rem;margin-bottom:8px;">DESSERT</h3>
-        <p style="margin:3px 0;font-size:0.95rem;">Dessert of the Day</p>
-      </div>
-      <div style="text-align:center;margin-top:24px;border-top:2px solid #d4aa5a;padding-top:20px;">
-        <p style="font-style:italic;color:#1a3a2a;font-size:0.9rem;">A Complete Italian Experience for just</p>
-        <p style="font-size:2.5rem;color:#d4aa5a;margin:4px 0;font-weight:700;">$55</p>
-        <p style="font-size:0.85rem;letter-spacing:0.05em;">Call to Reserve: <a href="tel:5612723566" style="color:#1a3a2a;">561.272.3566</a></p>
-      </div>
-    </div>
-  </div>
-
 
 <!-- ================================================
      NAVIGATION
